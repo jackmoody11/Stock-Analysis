@@ -20,6 +20,9 @@ import time
 import csv
 from yahoo_finance import Share
 
+def print_separator():
+    print("=====================================================================")
+
 version = sys.version_info[0]
 
 try:
@@ -239,9 +242,9 @@ for i in SPYdata:
 
 "{0:.2f}".format(13.949999999999999)
 
-print("=====================================================================")
+print_separator()
 print("==========================" + " S&P 500 " + "======================================")
-print("=====================================================================") 
+print_separator()
 print("Up Days: " + str(dayUp) + "   " + "{0:.2f}".format(100 * float(dayUp)/float(length)) + "%")
 print("Down Days: " + str(dayDown) + "   " + "{0:.2f}".format(100 * float(dayDown)/float(length)) + "%")
 print("Neutral Days: " + str(dayNeutral) + "   " + "{0:.2f}".format(100 * float(dayNeutral)/float(length)) + "%")
@@ -255,7 +258,7 @@ print("Neutral Open Days: " + str(openNeutral) + "    " + "{0:.2f}".format(100 *
 print("Up Close Days: " + str(closeUp) + "    " + "{0:.2f}".format(100 * float(closeUp)/float(length)) + "%")
 print("Down Close Days: " + str(closeDown) + "    " + "{0:.2f}".format(100 * float(closeDown)/float(length)) + "%")
 print("Neutral Close Days: " + str(closeNeutral) + "   " + "{0:.2f}".format(100 * float(closeNeutral-1)/float(length)) + "%")
-print("=====================================================================")
+print_separator()
 
 dayUp = 0
 dayDown = 0
@@ -302,9 +305,9 @@ for n in givenStock:
 		openNeutral += 1
 
 		
-print("=====================================================================")		
+print_separator()
 print("==========================" + theTicker + "======================================")
-print("=====================================================================") 
+print_separator()
 print("Up Days: " + str(dayUp) + "    " + "{0:.2f}".format(100 * float(dayUp)/float(length)) + "%")
 print("Down Days: " + str(dayDown) + "    " + "{0:.2f}".format(100 * float(dayDown)/float(length)) + "%")
 print("Neutral Days: " + str(dayNeutral) + "    " + "{0:.2f}".format(100 * float(dayNeutral)/float(length)) + "%")
@@ -318,4 +321,4 @@ print("Neutral Open Days: " + str(openNeutral) + "    " + "{0:.2f}".format(100 *
 print("Up Close Days: " + str(closeUp) + "    " + "{0:.2f}".format(100 * float(closeUp)/float(length)) + "%")
 print("Down Close Days: " + str(closeDown) + "    " + "{0:.2f}".format(100 * float(closeDown)/float(length)) + "%")
 print("Neutral Close Days: " + str(closeNeutral) + "    " + "{0:.2f}".format(100 * float(closeNeutral-1)/float(length)) + "%")
-print("=====================================================================")
+print_separator()
